@@ -1,7 +1,7 @@
 <?php
 include 'DBController.php';
 $db_handle = new DBController();
-$makeResult = $db_handle->runQuery("SELECT DISTINCT make FROM cars ORDER BY make ASC");
+$classResult = $db_handle->runQuery("SELECT DISTINCT class FROM cars ORDER BY class ASC");
 ?>
 <html>
 <head>
@@ -17,12 +17,12 @@ $makeResult = $db_handle->runQuery("SELECT DISTINCT make FROM cars ORDER BY make
     <form method="POST" name="search" action="indexsearch.php">
         <div id="demo-grid">
             <div class="search-box">
-                <select id="Place" name="make[]" multiple="multiple">
-                    <option value="0" selected="selected">Select Make</option>
+                <select id="Place" name="class[]" multiple="multiple">
+                    <option value="0" selected="selected">Select class</option>
                         <?php
-                        if (! empty($makeResult)) {
-                            foreach ($makeResult as $key => $value) {
-                                echo '<option value="' . $makeResult[$key]['make'] . '">' . $makeResult[$key]['make'] . '</option>';
+                        if (! empty($classResult)) {
+                            foreach ($classResult as $key => $value) {
+                                echo '<option value="' . $classResult[$key]['class'] . '">' . $classResult[$key]['class'] . '</option>';
                             }
                         }
                         ?>
@@ -31,7 +31,7 @@ $makeResult = $db_handle->runQuery("SELECT DISTINCT make FROM cars ORDER BY make
             </div>
             
                 <?php
-                if (! empty($_POST['make'])) {
+                if (! empty($_POST['class'])) {
                     ?>
                     <table cellpadding="10" cellspacing="1">
 
@@ -53,17 +53,17 @@ $makeResult = $db_handle->runQuery("SELECT DISTINCT make FROM cars ORDER BY make
                 <?php
                     $query = "SELECT * from cars";
                     $i = 0;
-                    $selectedOptionCount = count($_POST['make']);
+                    $selectedOptionCount = count($_POST['class']);
                     $selectedOption = "";
                     while ($i < $selectedOptionCount) {
-                        $selectedOption = $selectedOption . "'" . $_POST['make'][$i] . "'";
+                        $selectedOption = $selectedOption . "'" . $_POST['class'][$i] . "'";
                         if ($i < $selectedOptionCount - 1) {
                             $selectedOption = $selectedOption . ", ";
                         }
                         
                         $i ++;
                     }
-                    $query = $query . " WHERE make in (" . $selectedOption . ")";
+                    $query = $query . " WHERE class in (" . $selectedOption . ")";
                     
                     $result = $db_handle->runQuery($query);
                 }
