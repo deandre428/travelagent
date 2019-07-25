@@ -2,7 +2,7 @@
 class DBController {
 	 private $host = "den1.mysql6.gear.host ";
 	 private $user = "travelagent";
-    private $password = "travelagent1";
+    private $password = "travelagent!";
 	 private $database = "travelagent";
 	       private $conn;
 	
