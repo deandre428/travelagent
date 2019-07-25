@@ -1,6 +1,6 @@
 <?php
 class DBController {
-	 private $host = "den1.mysql6.gear.host ";
+	 private $host = "den1.mysql6.gear.host";
 	 private $user = "travelagent";
     private $password = "travelagent!";
 	 private $database = "travelagent";
