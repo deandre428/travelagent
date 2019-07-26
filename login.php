@@ -9,7 +9,7 @@
 
 
 html{
-	background:url('travel-agent.jpg') no-repeat center center fixed;
+	background:url('fleet2.jpg') no-repeat center center fixed;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
@@ -22,10 +22,7 @@ html{
 
 </head>
 <body>
-
-
   <div class="header">
-  <h2> TRAVEL AGENT APP</h2>
   	<h2>Login</h2>
   </div>
 
@@ -44,7 +41,7 @@ html{
   	</div>
   	<p>
 		  Not yet a member? <a href="register.php">Sign up</a>
-		  
+		  <a href="homepage.html">Homepage</a>
   	</p>
   </form>
 </body>
