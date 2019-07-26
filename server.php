@@ -16,7 +16,7 @@ $errors = array();
 
 // connect to the database
 
-$db = mysqli_connect('den1.mysql2.gear.host', 'carusers', 'Marlboro27!', 'carusers');
+$db = mysqli_connect('den1.mysql6.gear.host', 'travelagent', 'travelagent!', 'travelagent');
 
 
 
