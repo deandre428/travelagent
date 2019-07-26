@@ -7,10 +7,7 @@ $email    = "";
 $errors = array();
 
 // connect to the database
-include 'DBController.php';
-
-$db = new DBController();
-
+$db = mysqli_connect('den1.mysql6.gear.host', 'travelagent', 'travelagent!', 'travelagent');
 
 
 // REGISTER USER
