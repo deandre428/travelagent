@@ -29,7 +29,7 @@ html{
   </div>
 
   <form method="post" action="register.php">
-  	<?php include('errors.php'); ?>
+  	<?php >
   	<div class="input-group">
   	  <label>Username</label>
   	  <input type="text" name="username" value="<?php echo $username; ?>">
