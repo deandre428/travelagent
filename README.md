@@ -14,9 +14,9 @@
 # register.php= registration page
 # indexsearch.php= car search page
 # homepage.html= the main homepage
-# DB_Connector.php= code to connect the database for the search function
+# DB_Connector.php= code to connect to the database for the search function
 # server.php= php code for login and registration
 # index.php= page that appears after succesfull login
 
 
-# Missing Functionalities: create a pre-payparking service and checkout!!!
+# Missing Functionalities: create a pre-pay parking service and checkout!!!
