@@ -7,7 +7,6 @@ $classResult = $db_handle->runQuery("SELECT DISTINCT class FROM cars ORDER BY cl
 <html>
 <head>
 <link href="css/search.css" type="text/css" rel="stylesheet" />
-
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <title>Search Car Information</title>
 </head>
