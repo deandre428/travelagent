@@ -40,68 +40,40 @@ foreach($_REQUEST as $key => $val){
 }
 ?>
 </div>
-<form action="../aux/output.php"
-      method="post"
-      id="signup_form"
-      oninput="checkForm(this);">
-<table id = "bodyTable">
-  <tr>
-    <th colspan="2"> <h1>Credit Card Scanner</h1> </th></tr>
-  <tr>
-    <td>
-<label id="CardNumberLabel" for="cardNumber">Card Number:</label> </td>
-<td>
-<label id="password_label" for="password">Security Code</label></td> 
-</tr>
-<tr>
-<td>
- <input id="cardNumber" name="cardNumbere" type="text" /></td>
- <td>
- <input id="password" name="password" type="password" />
- </td>
-</tr>
-<tr>
-    <td>             
-<label id="NameOnCardLabel" for="NameOnCard">Name On Card</label>
-</td>
-<td>
+
+<div id="bodyTable">
+<form action="../aux/output.php" method="post" id="signup_form" oninput="checkForm(this);">
+<h2>Credit Card Form</h2>
+   <h1>User Registration</h1>
+
+  <label id="password_label" for="password">Security Code</label>
+  <input id="password" name="password" type="password" />
+
+  <label id="CardNumberLabel" for="cardNumber">Card Number:</label> 
+  <input id="cardNumber" name="cardNumbere" type="text" />
+  
+  <label id="NameOnCardLabel" for="NameOnCard">Name On Card</label>
+  <input id="NameOnCard" name="NameOnCard" type="text" />
+  
   <label id="expiration" for = "expiration">Expiration</label>
-</td>
-</tr>
-<tr>
-  <td>
- <input id="NameOnCard" name="NameOnCard" type="text" />
-</td> <td>
-        <?php
-        echo "<select name=month>";
-        for($i=0;$i<=11;$i++){
-        $month=date('F',strtotime("first day of $i month"));
-        echo "<option value=$month>$month</option> ";
-        }
-        echo "</select>";
-        echo "<select name=year>";
-                for($i=0;$i<=5;$i++){
-                $year=date('Y',strtotime("last day of +$i year"));
-                echo "<option name='$year'>$year</option>";
-                }
-                echo "</select>";
-                ?>
-                </td>
-              </tr>
-              <tr> <td colspan = "2"> <input id="submit" type="submit" value="Check Out" /></td> </tr>
-              <tr ><td></td><td> <p><div id="cardType">
-    <ul >
-        <div id="AmericanExpress">American Express</div>
-        <li id="VISA">Visa</li>
-        <li id="MasterCard">Master Card</li>
-    </ul>
-</div> </p> </td> </tr>
-</table>
-
-
-
+  <input id="submit" type="submit" value="Checkout">
+  <?php
+    echo "<select name=month>";
+    for($i = 0; $i <= 11; $i++){
+      $month = date('F', strtotime("first day of $i month"));
+      echo "<option value=$month>$month</option> ";
+    }
+    echo "</select>";
+    echo "<select name=year>";
+    for($i = 0; $i <= 5; $i++){
+      $year = date('Y', strtotime("last day of +$i year"));
+      echo "<option name='$year'>$year</option>";
+    }
+    echo "</select>";
+  ?>
+  <input id="submit" type="submit" value="Check Out" />
+  </div>
 </form>
-
 </body>
 <script>
     function openNav() {

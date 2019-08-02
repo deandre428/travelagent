@@ -5,7 +5,6 @@ function checkForm(form) {
     document.getElementById("MasterCard").style.display = "none";
     if (form.cardNumber.value[0] == 5) { // name entered
         document.getElementById("MasterCard").style.display = "block";
-        document.getElementById("MasterCard").style.backgroundImage = "../images/amex.png";
     }
     if (form.cardNumber.value[0] == 3) { // name entered
         document.getElementById("AmericanExpress").style.display = "block";
