@@ -15,25 +15,18 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 <style>
-
-
 html{
-	background:url('travel-agent.jpg') no-repeat center center fixed;
+	background:url('./images/travel-agent.jpg') no-repeat center center fixed;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
 	background-size:cover;
 }
-
 </style>
-
 </head>
-
 <body>
-
 <div class="header">
 	<h2>Home Page</h2>
 </div>
@@ -49,15 +42,12 @@ html{
       	</h3>
       </div>
   	<?php endif ?>
-
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
     	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
 		<p> <a href="index.php?logout='1'" style="color: red;">logout</a></p>
 		<p> <a href="homepage.html" style="color: red;">Home</a>
-		
     <?php endif ?>
 </div>
-
 </body>
 </html>

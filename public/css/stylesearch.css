@@ -1,10 +1,10 @@
 
-#demo-grid {margin-bottom:30px;}
-#demo-grid .txt-heading{background-color: #D3F5B8;}
-#demo-grid table{width:100%;background-color:#F0F0F0;}
+.demo-grid {margin-bottom:30px;}
+.demo-grid .txt-heading{background-color: #D3F5B8;}
+.demo-grid table{width:100%;background-color:#F0F0F0;}
 
-#demo-grid table th{text-align:left;}
-#demo-grid table td{background-color:#FFFFFF;}
+.demo-grid table th{text-align:left;}
+.demo-grid table td{background-color:#FFFFFF;}
 .search-box {border: 0px solid #F0F0F0; margin: 80px 0px;}
 button#Filter {
     padding: 5px 30px;
@@ -42,7 +42,7 @@ h2{
 }
 
 html{
-	background:url('travel-agent.jpg') no-repeat center center fixed;
+	background:url('../images/travel-agent.jpg') no-repeat center center fixed;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
