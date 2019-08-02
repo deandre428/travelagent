@@ -1,0 +1,16 @@
+html{
+	background:url('../images/travel-agent.jpg') no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+#main_contain{
+ background-color: white;
+ border: 1px black solid;
+ color: black;
+ width: 20em;
+ height: 30em;
+ padding: 1em 0em 1em 2em;
+ margin: 0 auto;
+}

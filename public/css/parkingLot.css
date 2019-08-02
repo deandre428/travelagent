@@ -1,0 +1,44 @@
+table#bodyTable{
+	border:0;
+	width: 80%;
+	margin-left: 10%;
+    margin-right: 10%;
+    background-color: #aaba;
+}
+#centralBody{
+    background-color: #aaba;
+}
+#cardType {
+    background-color: floralwhite;
+    color : greenyellow;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16;
+}
+#AmericanExpress{
+    display:none;
+}
+#VISA{
+    display:none;
+}
+#MasterCard{
+    display:none;
+}
+
+input{
+    border: 1px solid #aaa;
+    width:80%;
+    align-self: left;
+    margin-left: 10%;
+}
+select{
+    margin-left: 10%;
+}
+
+label{
+    margin-left: 10%;
+}
+input#submit{
+    background-color: cyan;
+    color: white;
+}
