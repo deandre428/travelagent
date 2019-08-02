@@ -1,5 +1,5 @@
 <?php 
-include 'DBController.php';
+include './server/DBController.php';
 $db_handle = new DBController();
 ?>
 
@@ -10,9 +10,8 @@ $db_handle = new DBController();
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <link href="css/shoppingcart.css" type="text/css" rel="stylesheet" />
+ <link href="css/cart.css" type="text/css" rel="stylesheet" />
  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
- <script src="shoppingcart.js"></script>
  <title>Checkout</title>
 </head>
 <body>

@@ -1,9 +1,12 @@
-<?php include('server.php') ?>
+<?php
+include '../server/DBController.php';
+$db_handle = new DBController();
+?>
 <!DOCTYPE html>
 <html>
 <head>
   <title>Registration system PHP and MySQL</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
 <style>
 html{
 	background:url('./images/travel-agent.jpg') no-repeat center center fixed;
@@ -20,7 +23,7 @@ html{
   </div>
 
   <form method="post" action="register.php">
-  	<?php include('errors.php'); ?>
+  	<?php include('../aux/errors.php'); ?>
   	<div class="input-group">
   	  <label>Username</label>
   	  <input type="text" name="username" value="<?php echo $username; ?>">

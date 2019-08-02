@@ -1,19 +1,28 @@
 <?php
 session_start();
-include 'DBController.php';
+include './server/DBController.php';
 $db_handle = new DBController();
 $classResult = $db_handle->runQuery("SELECT DISTINCT class FROM cars ORDER BY class ASC");
 ?>
 <html>
 <head>
-<link href="css/stylesearch.css" type="text/css" rel="stylesheet" />
+<link href="css/search.css" type="text/css" rel="stylesheet" />
+
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <title>Search Car Information</title>
 </head>
 <body>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Menu</span>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="./login.php">Login</a>
+    <a href="./login.php">Register</a>
+    <a href="./search.php">Car Rental</a>
+    <a href="./search.php">Parking Services</a>
+    <a href="./login.php">Logout</a>
+  </div>
     <h2>Rent-A-Car</h2>
-    <p><a href="../homepage.html">Home</a> </p>
-    <form method="POST" name="search" action="indexsearch.php">
+    <form method="post" name="search" action="./search.php">
             <div class="search-box">
                 <select id="Place" name="class[]" multiple="multiple">
                     <option value="0" selected="selected">Select class</option>
@@ -28,7 +37,7 @@ $classResult = $db_handle->runQuery("SELECT DISTINCT class FROM cars ORDER BY cl
                 <button id="Filter">Search</button>
             </div>
     </form>
-<form action="shoppingcart.php" id="checkoutForm">
+<form action="./cart.php" id="checkoutForm">
 <div class="demo-grid">
         <?php if (! empty($_POST['class'])) { ?>
         <table cellpadding="10" cellspacing="1">
@@ -136,6 +145,18 @@ $classResult = $db_handle->runQuery("SELECT DISTINCT class FROM cars ORDER BY cl
     <input id="submitCheckout" type="submit" value="Checkout">        
 </form>
 <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+      document.body.style.backgroundColor = "white";
+    }
+</script>
+<script>
 $('#submitCheckout').on('click', function () {
   var carSelector = $('input[name=CarID]:checked', '#checkoutForm').attr('class');
   var spotSelector = $('input[name=Parking_nr]:checked', '#checkoutForm').attr('class');
@@ -159,7 +180,7 @@ $('#submitCheckout').on('click', function () {
         e.preventDefault();
         $.ajax({
             type: "post",  //type of method
-            url: "shoppingcart.php",  //your page
+            url: "cart.php",  //your page
             data: { car: car_data_arr, spot: spot_data_arr},// passing the values
             success: function (res) {
                 console.log(res);

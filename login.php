@@ -1,9 +1,9 @@
-<?php include('server.php') ?>
+<?php include('./server/server.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
   <title>Registration system PHP and MySQL</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
 <style>
 html{
 	background:url('./images/travel-agent.jpg') no-repeat center center fixed;
@@ -18,8 +18,8 @@ html{
   <div class="header">
   	<h2>Login</h2>
   </div>
-  <form method="post" action="login.php">
-  	<?php include('errors.php'); ?>
+  <form method="post" action="/login.php">
+  	<?php include('./aux/errors.php'); ?>
   	<div class="input-group">
   		<label>Username</label>
   		<input type="text" name="username" >

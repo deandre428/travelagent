@@ -1,12 +1,20 @@
 h1{
-
-    font-size:70px;
-    color:black;
+    color:white;
     text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 1em 0;
+    background: #5C914B;
+
 }
 body {
     font-family: "Lato", sans-serif;
     transition: background-color .5s;
+  }
+
+  span {
+    color: white;
+    border-radius: 10px
   }
   
   .sidenav {

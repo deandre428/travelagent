@@ -15,7 +15,7 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 <style>
 html{
 	background:url('./images/travel-agent.jpg') no-repeat center center fixed;
@@ -44,9 +44,9 @@ html{
   	<?php endif ?>
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
-    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-		<p> <a href="index.php?logout='1'" style="color: red;">logout</a></p>
-		<p> <a href="homepage.html" style="color: red;">Home</a>
+    	<p>Welcome <strong><?php echo $_SESSION['username']."!"; ?></strong></p><br>
+		<p> <a href="index.php?logout='1'" style="color: #5F9EA0;">Logout</a></p>
+		<p> <a href="index.html" style="color: #5F9EA0;">Home</a>
     <?php endif ?>
 </div>
 </body>
